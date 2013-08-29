@@ -1,7 +1,10 @@
 class Song
-  @artist = 'Led Zepplin'
+  @artist = 'The Progues'
 
-  def get_the_artist
-    @artist
+  def artist; 'Led Zeppelin'; end
+  def get_the_artist; @artist; end
+
+  def class_artist
+    self.class.artist
   end
 end
