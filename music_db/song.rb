@@ -5,6 +5,6 @@ class Song
   def get_the_artist; @artist; end
 
   def class_artist
-    self.class.artist
+    self.class.instance_variable_get(:@artist)
   end
 end
