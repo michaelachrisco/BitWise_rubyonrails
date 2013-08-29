@@ -1,9 +1,7 @@
 class Song
-  def title
-    @title
-  end
+  @artist = 'Led Zepplin'
 
-  def title=(new_title)
-    @title = new_title
+  def get_the_artist
+    @artist
   end
 end
