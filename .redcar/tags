@@ -1,0 +1,5 @@
+1377826714
+Song	/home/mike/BitWise_rubyonrails/trunk/music_db/song.rb	class Song
+artist	/home/mike/BitWise_rubyonrails/trunk/music_db/song.rb	  def artist;
+class_artist	/home/mike/BitWise_rubyonrails/trunk/music_db/song.rb	  def class_artist
+get_the_artist	/home/mike/BitWise_rubyonrails/trunk/music_db/song.rb	  def get_the_artist;
