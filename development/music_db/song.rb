@@ -1,17 +1,18 @@
-require "yaml"
+require 'yaml'
+
 
 class Song
-  attr_accessor :title, :artist, :album, :track, :notes
+  attr_accessor :title, :artist, :album, :track
 
   def to_s
-    output = "Title: #{@title}\n"
-    output << "Artist: #{@artist}\n"
-    output << "Album: #{@album}\n"
-    output << "Track: #{@track}\n"
+    output = "title: #{@title}\n"
+    output << "artist: #{@artist}\n"
+    output << "album: #{@album}\n"
+    output << "track: #{@track}\n"
 
     output
   end
-  
+
   def to_yaml
     the_song = {
       title: @title,
@@ -29,6 +30,4 @@ class Song
 
     File.write("#{filename}.yml", to_yaml)
   end
-
-
 end
