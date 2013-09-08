@@ -1,7 +1,9 @@
 require 'yaml'
 
-
+# Module to create YAMLable objects out of MusicDB objects. 
 module MusicDB::YAMLable
+
+  # @return YAML.dump if object has attributes; raise error if not.
   def to_yaml
     if self.respond_to? :attributes
       YAML.dump(attributes)
@@ -10,6 +12,7 @@ module MusicDB::YAMLable
     end
   end
 
+# @param [String] filename dump to filename.yml
   def dump(filename=nil)
     filename ||= 'unknown'
 
