@@ -3,6 +3,7 @@ require_relative 'yamlable'
 # This class creates a Song object within the MusicDB Object.
 class MusicDB::Song
   include MusicDB::YAMLable
+#  include "music_db/sinatraout.rb"
 
   attr_accessor :title, :artist, :album, :track
 # @param [String] title The title of the Song.
