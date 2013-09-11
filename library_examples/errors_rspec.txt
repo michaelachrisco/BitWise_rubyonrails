@@ -1,0 +1,34 @@
+rspec my_outfit_spec.rb 
+F
+
+Failures:
+
+  1) MyOutfit#pants has 2 pairs
+     Failure/Error: expect(subject.pants.first).to be_a Pants
+     NameError:
+       uninitialized constant MyOutfit::Pants
+     # ./my_outfit.rb:4:in `initialize'
+     # ./my_outfit_spec.rb:5:in `block (3 levels) in <top (required)>'
+
+Finished in 0.00066 seconds
+1 example, 1 failure
+
+Failed examples:
+
+rspec ./my_outfit_spec.rb:4 # MyOutfit#pants has 2 pairs
+mike@ubuntu:~/BitWise_rubyonrails/library_examples$ rspec --format=documentation --color my_thing_spec.rb
+/home/mike/.rvm/gems/ruby-2.0.0-p247/gems/rspec-core-2.14.5/lib/rspec/core/configuration.rb:896:in `load': cannot load such file -- /home/mike/BitWise_rubyonrails/library_examples/my_thing_spec.rb (LoadError)
+	from /home/mike/.rvm/gems/ruby-2.0.0-p247/gems/rspec-core-2.14.5/lib/rspec/core/configuration.rb:896:in `block in load_spec_files'
+	from /home/mike/.rvm/gems/ruby-2.0.0-p247/gems/rspec-core-2.14.5/lib/rspec/core/configuration.rb:896:in `each'
+	from /home/mike/.rvm/gems/ruby-2.0.0-p247/gems/rspec-core-2.14.5/lib/rspec/core/configuration.rb:896:in `load_spec_files'
+	from /home/mike/.rvm/gems/ruby-2.0.0-p247/gems/rspec-core-2.14.5/lib/rspec/core/command_line.rb:22:in `run'
+	from /home/mike/.rvm/gems/ruby-2.0.0-p247/gems/rspec-core-2.14.5/lib/rspec/core/runner.rb:80:in `run'
+	from /home/mike/.rvm/gems/ruby-2.0.0-p247/gems/rspec-core-2.14.5/lib/rspec/core/runner.rb:17:in `block in autorun'
+mike@ubuntu:~/BitWise_rubyonrails/library_examples$ rspec my_thing_spec.rb/home/mike/.rvm/gems/ruby-2.0.0-p247/gems/rspec-core-2.14.5/lib/rspec/core/configuration.rb:896:in `load': cannot load such file -- /home/mike/BitWise_rubyonrails/library_examples/my_thing_spec.rb (LoadError)
+	from /home/mike/.rvm/gems/ruby-2.0.0-p247/gems/rspec-core-2.14.5/lib/rspec/core/configuration.rb:896:in `block in load_spec_files'
+	from /home/mike/.rvm/gems/ruby-2.0.0-p247/gems/rspec-core-2.14.5/lib/rspec/core/configuration.rb:896:in `each'
+	from /home/mike/.rvm/gems/ruby-2.0.0-p247/gems/rspec-core-2.14.5/lib/rspec/core/configuration.rb:896:in `load_spec_files'
+	from /home/mike/.rvm/gems/ruby-2.0.0-p247/gems/rspec-core-2.14.5/lib/rspec/core/command_line.rb:22:in `run'
+	from /home/mike/.rvm/gems/ruby-2.0.0-p247/gems/rspec-core-2.14.5/lib/rspec/core/runner.rb:80:in `run'
+	from /home/mike/.rvm/gems/ruby-2.0.0-p247/gems/rspec-core-2.14.5/lib/rspec/core/runner.rb:17:in `block in autorun'
+
