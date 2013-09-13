@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130913022657) do
+ActiveRecord::Schema.define(version: 20130912204904) do
 
   create_table "photos", force: true do |t|
-    t.string   "filename"
+    t.string   "file_name"
     t.string   "path"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -25,9 +25,9 @@ ActiveRecord::Schema.define(version: 20130913022657) do
 
   create_table "users", force: true do |t|
     t.string   "email"
-    t.string   "username"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "username"
   end
 
 end

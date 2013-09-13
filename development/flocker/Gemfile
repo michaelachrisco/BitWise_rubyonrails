@@ -44,7 +44,6 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-#rspec-rails
 group :development, :test do
-  gem 'rspec-rails', '~> 2.0'
+  gem 'rspec-rails'
 end

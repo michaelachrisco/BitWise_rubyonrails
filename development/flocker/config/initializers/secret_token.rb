@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Flocker::Application.config.secret_key_base = '10b2d1c30e91350ac98254bed437cda7a0f402cd1900d0b790a4f021620ed01978d06dcaf2018c88dd0c826823f5838f7295adfe135dd192a6d02bbff524847d'
+Flockr::Application.config.secret_key_base = 'f6d1b188171aa860965d53062929bd1ca6a490721c805f5d43d1bbd2d88e5a0be4c33e1b6c9c8f68fa2cc6551273cef8d772f6c3c9afe7cca2999ef6bbfc9b27'

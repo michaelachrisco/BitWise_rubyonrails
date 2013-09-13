@@ -1,7 +1,10 @@
-Flocker::Application.routes.draw do
-  resources :users
+Flockr::Application.routes.draw do
+  root 'home#index'
 
-  resources :photos
+  resources :users do
+    resources :photos
+  end
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -43,7 +46,7 @@ Flocker::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
