@@ -48,3 +48,8 @@ group :development, :test do
   gem 'rspec-rails'
 end
 
+# custom bootstraptwitter
+gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
+
+# capybara
+gem 'capybara'
