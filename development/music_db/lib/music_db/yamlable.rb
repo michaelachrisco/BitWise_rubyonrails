@@ -1,7 +1,8 @@
 require 'yaml'
 
 # Module to create YAMLable objects out of MusicDB objects. 
-module MusicDB::YAMLable
+module MusicDB
+module YAMLable
 
   # @return YAML.dump if object has attributes; raise error if not.
   def to_yaml
@@ -18,4 +19,5 @@ module MusicDB::YAMLable
 
     File.write("#{filename}.yml", to_yaml)
   end
+end
 end
