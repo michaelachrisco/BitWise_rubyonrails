@@ -2,7 +2,7 @@ Flockr::Application.routes.draw do
   root 'home#index'
 
   resources :sessions, only: %i[new create destroy]
-  get '/sign_up' => 'users#new' 
+  get '/sign_up' => 'users#new'
   get '/sign_in' => 'sessions#new'
   delete '/sign_out' => 'sessions#destroy'
 
