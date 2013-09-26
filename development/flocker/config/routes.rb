@@ -1,4 +1,8 @@
 Flockr::Application.routes.draw do
+  get "comments/new"
+  get "comments/create"
+  get "comments/destroy"
+  get "comments/edit"
   root 'home#index'
 
   resources :sessions, only: %i[new create destroy]
