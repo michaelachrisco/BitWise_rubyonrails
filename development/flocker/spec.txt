@@ -1,0 +1,285 @@
+
+HomeHelper
+  add some examples to (or delete) /home/mesa/flockr/spec/helpers/home_helper_spec.rb (PENDING: No reason given)
+
+home/index.html.erb
+  renders a list of photos
+
+Authentication
+  New user signs up
+  Existing user signs in
+
+users/edit
+  renders the edit user form
+
+Comment
+  should respond to #created_at
+  should respond to #photo
+  should respond to #user
+  should respond to #body
+  should respond to #updated_at
+  photo
+    is required
+  user
+    is required
+  body
+    is required
+
+PhotosController
+  routing
+    routes to #edit
+    routes to #update
+    routes to #destroy
+    routes to #index
+    routes to #create
+    routes to #show
+    routes to #new
+
+users/show
+  renders attributes in <p>
+
+sessions/new.html.erb
+  add some examples to (or delete) /home/mesa/flockr/spec/views/sessions/new.html.erb_spec.rb (PENDING: No reason given)
+
+photos/new
+  renders new photo form
+
+HomeController
+  GET 'index'
+    assigns all photos as @photos
+
+photos/show
+  renders attributes in <p>
+  includes a link to leave a comment
+  no comments
+    does not show any comments
+  with comments
+    shows the comments and who left each comment
+    current user left the comment
+      has an edit link on the comment
+      has an delete link on the comment
+    current user did not leave the comment
+      has an edit link on the comment
+      has an delete link on the comment
+
+SessionsHelper
+  add some examples to (or delete) /home/mesa/flockr/spec/helpers/sessions_helper_spec.rb (PENDING: No reason given)
+
+users/new
+  renders new user form
+
+PhotosHelper
+  add some examples to (or delete) /home/mesa/flockr/spec/helpers/photos_helper_spec.rb (PENDING: No reason given)
+
+UsersController
+  routing
+    routes to #edit
+    routes to #update
+    routes to #destroy
+    routes to #index
+    routes to #create
+    routes to #show
+    routes to #new
+
+User
+  should respond to #remember_token
+  should respond to #email
+  should be valid
+  should respond to #password_confirmation
+  should respond to #authenticate
+  should respond to #photos
+  should respond to #password
+  should respond to #comments
+  should respond to #username
+  password
+    when invalid
+      returns false
+    when valid
+      returns the user
+    when confirmation does not match
+      should not be valid
+    when not provided
+      should not be valid
+  #destroy
+    destroys associated photos
+  remember token
+    remember_token
+      should not be blank
+  email
+    when created as upcased
+      saves the address as lowercase
+    with a duplicate
+      fails validation
+    when not provided
+      fails validation
+  photos
+    can have many photos
+  username
+    when created as upcased
+      saves the username as lowercase
+    when a duplicate
+      fails validation
+    when not provided
+      fails validation
+
+photos/_index.html.erb
+  renders a list of photos
+
+SessionsController
+  DELETE 'destroy'
+    redirects to the root url
+    signs out the current user
+  POST 'create'
+    when good password given
+      redirects to the user's page
+    when bad password given
+      rerenders the login page and displays the error
+  GET 'new'
+    returns http success
+    renders the new template
+
+CommentsHelper
+  add some examples to (or delete) /home/mesa/flockr/spec/helpers/comments_helper_spec.rb (PENDING: No reason given)
+
+Photo
+  can belong to a user
+  should respond to #comments
+  should respond to #image
+  should respond to #user
+  file_name
+    is required
+
+photos/edit
+  renders the edit photo form
+
+UsersHelper
+  add some examples to (or delete) /home/mesa/flockr/spec/helpers/users_helper_spec.rb (PENDING: No reason given)
+
+UsersController
+  GET edit
+    assigns the requested user as @user
+  PUT update
+    with valid params
+      redirects to the user
+      assigns the requested user as @user
+      updates the requested user
+    with invalid params
+      assigns the user as @user
+      re-renders the 'edit' template
+  DELETE destroy
+    destroys the requested user
+    redirects to the users list
+  GET index
+    assigns all users as @users
+  POST create
+    with valid params
+      redirects to the created user with a nice welcome message
+      assigns a newly created user as @user
+      creates a new User
+    with invalid params
+      assigns a newly created but unsaved user as @user
+      re-renders the 'new' template
+  GET new
+    assigns a new user as @user
+  GET show
+    assigns the requested user as @user
+
+users/index
+  renders a list of users
+
+comments/new.html.erb
+  add some examples to (or delete) /home/mesa/flockr/spec/views/comments/new.html.erb_spec.rb (PENDING: No reason given)
+
+comments/new.html.erb
+  add some examples to (or delete) /home/mesa/flockr/spec/views/comments/edit.html.erb_spec.rb (PENDING: No reason given)
+
+Photos
+  GET /photos
+    works! (now write some real specs)
+
+Users
+  GET /users
+    works! (now write some real specs)
+
+CommentsController
+  GET 'destroy'
+    DELETE destroy
+      destroys the requested comment
+      redirects to the photo
+  POST 'create'
+    with valid params
+      redirects to the created photo
+      assigns a newly created comment as @comment
+      creates a new Comment
+    with invalid params
+      assigns a newly created but unsaved comment as @comment
+      re-renders the 'new' template
+  GET 'new'
+    assigns a new comment as @comment
+
+comments/_form.html.erb
+  add some examples to (or delete) /home/mesa/flockr/spec/views/comments/_form.html.erb_spec.rb (PENDING: No reason given)
+
+PhotosController
+  GET edit
+    assigns the requested photo as @photo
+  PUT update
+    with valid params
+      redirects to the photo
+      assigns the requested photo as @photo
+      updates the requested photo
+    with invalid params
+      assigns the photo as @photo
+      re-renders the 'edit' template
+  DELETE destroy
+    destroys the requested photo
+    redirects to the photos list
+  GET index
+    assigns all photos as @photos
+  POST create
+    with valid params
+      redirects to the created photo
+      assigns a newly created photo as @photo
+      creates a new Photo
+    with invalid params
+      assigns a newly created but unsaved photo as @photo
+      re-renders the 'new' template
+  GET new
+    assigns a new photo as @photo
+  GET show
+    assigns the requested photo as @photo
+
+Pending:
+  HomeHelper add some examples to (or delete) /home/mesa/flockr/spec/helpers/home_helper_spec.rb
+    # No reason given
+    # ./spec/helpers/home_helper_spec.rb:14
+  sessions/new.html.erb add some examples to (or delete) /home/mesa/flockr/spec/views/sessions/new.html.erb_spec.rb
+    # No reason given
+    # ./spec/views/sessions/new.html.erb_spec.rb:4
+  SessionsHelper add some examples to (or delete) /home/mesa/flockr/spec/helpers/sessions_helper_spec.rb
+    # No reason given
+    # ./spec/helpers/sessions_helper_spec.rb:14
+  PhotosHelper add some examples to (or delete) /home/mesa/flockr/spec/helpers/photos_helper_spec.rb
+    # No reason given
+    # ./spec/helpers/photos_helper_spec.rb:14
+  CommentsHelper add some examples to (or delete) /home/mesa/flockr/spec/helpers/comments_helper_spec.rb
+    # No reason given
+    # ./spec/helpers/comments_helper_spec.rb:14
+  UsersHelper add some examples to (or delete) /home/mesa/flockr/spec/helpers/users_helper_spec.rb
+    # No reason given
+    # ./spec/helpers/users_helper_spec.rb:14
+  comments/new.html.erb add some examples to (or delete) /home/mesa/flockr/spec/views/comments/new.html.erb_spec.rb
+    # No reason given
+    # ./spec/views/comments/new.html.erb_spec.rb:4
+  comments/new.html.erb add some examples to (or delete) /home/mesa/flockr/spec/views/comments/edit.html.erb_spec.rb
+    # No reason given
+    # ./spec/views/comments/edit.html.erb_spec.rb:4
+  comments/_form.html.erb add some examples to (or delete) /home/mesa/flockr/spec/views/comments/_form.html.erb_spec.rb
+    # No reason given
+    # ./spec/views/comments/_form.html.erb_spec.rb:4
+
+Finished in 2.13 seconds
+125 examples, 0 failures, 9 pending
+
+Randomized with seed 58672
+
